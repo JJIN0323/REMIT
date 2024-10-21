@@ -1,0 +1,10 @@
+@font-face {
+  font-family: 'HiraKakuPro-W3-AlphaNum';
+  src: url('HiraKakuPro-W3-AlphaNum.eot');
+  src: url('HiraKakuPro-W3-AlphaNum.eot?#iefix') format('embedded-opentype'),
+       url('HiraKakuPro-W3-AlphaNum.ttf') format('truetype'),
+       url('HiraKakuPro-W3-AlphaNum.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+

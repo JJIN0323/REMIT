@@ -1,0 +1,14 @@
+@font-face {
+  font-family: 'Meiryo-Italic';
+  src: url('../fonts/Meiryo.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Meiryo';
+  src: url('../fonts/Meiryo.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+

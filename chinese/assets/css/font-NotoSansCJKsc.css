@@ -1,0 +1,10 @@
+@font-face {
+  font-family: 'NotoSansCJKsc-Regular-Alphabetic';
+  src: url('NotoSansCJKsc-Regular-Alphabetic.eot');
+  src: url('NotoSansCJKsc-Regular-Alphabetic.eot?#iefix') format('embedded-opentype'),
+       url('NotoSansCJKsc-Regular-Alphabetic.ttf') format('truetype'),
+       url('NotoSansCJKsc-Regular-Alphabetic.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+

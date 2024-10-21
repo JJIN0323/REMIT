@@ -1,0 +1,302 @@
+<!DOCTYPE HTML>
+<html lang="ja">
+
+<head>
+	<title>DIGITEL</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="assets/css/main.css" />
+</head>
+
+<body class="is-preload">
+
+	<!-- Header -->
+	<header id="header">
+		<div class="container">
+			<div class="headerLogo">
+				<a class="logo" href="chinese/index.html">
+					<img src="images/logo.png" alt="digitel" />
+					<span>　デジテル 中国送金</span>
+				</a>
+				<h5>資金移動業 (関東財務局長 第00023号)</h5>
+			</div>
+
+			<div class="headerMenu">
+				<button class="gray one">ご利用案内</button>
+				<button class="gray two">送金シミュレーション</button>
+			</div>
+
+			<div class="headerLanguage">
+				<!-- contact -->
+				<a class="button primary contact" href="#contact">お問合せ</a>
+				<!-- Language select -->
+				<button class="primary languageSelect">日本語</button>
+			</div>
+		</div>
+
+		<!-- Nav -->
+		<nav id="nav">
+			<ul>
+				<li><a href="#one">ご利用案内</a></li>
+				<li><a href="#two">送金シミュレーション</a></li>
+				<li><a href="#contact">お問合せ</a></li>
+
+				<li class="opener icon fa-angle-down">日本語</li>
+			</ul>
+		</nav>
+	</header>
+
+	<!-- Main -->
+	<div id="main">
+		<div class="wrapper style1">
+			<div class="inner">
+				<div class="row gtr-200 alignCenter">
+					<!-- Left -->
+					<div class="col-6 col-12-medium textCenter">
+						<h3>送金レートが良い！</h3>
+						<h3>安価な手数料！</h3>
+						<h3>当日、受取人銀行口座に着金！</h3>
+						<h3>スマホからの簡単申込みも可能！</h3>
+						<table class="alt">
+							<tr>
+								<td rowspan="3">
+									<button class="primary wide">日本</button>
+									<span>
+										<!-- BLANK -->　</span>
+								</td>
+								<td>(円指定)</td>
+								<td rowspan="3">
+									<button class="primary wide">中国</button>
+									<span>受取銀行口座振込</span>
+								</td>
+							</tr>
+							<tr>
+								<td class="icon fa fa-long-arrow-right "></td>
+							</tr>
+							<tr>
+								<td>(元指定)</td>
+							</tr>
+						</table>
+						<div class="exchangeRateBox">
+							<h4>＜送金手数料＞</h4>
+							<span>> 300,000円まで : 1,000円<br />
+								> 300,001円～1,000,000円 : 2,000円</span>
+						</div>
+					</div>
+					<!-- Right -->
+					<div class="col-6 col-12-medium">
+						<div class="box">
+							<!-- 送金レート -->
+							<div class="exchangeRateBox" id="chInfo">
+								<span><strong>送金レート :</strong></span>
+								<span class="exchangeRateResult"></span>
+							</div>
+							<div class="title">
+								<h3>送金シミュレーション（参考値）</h3>
+							</div>
+							<form method="post" action="#">
+								<div class="row gtr-uniform">
+									<!-- 送金額指定 -->
+									<div class="col-6 col-12-small">
+										<input type="radio" name="radioName" id="radio1" value="radioJPY"
+											checked="checked" />
+										<label for="radio1">送金額指定</label>
+									</div>
+									<div class="col-4 col-8-small">
+										<input type="text" id="iptSimulatorJPY" name="JPY" class="onlyNumber" />
+									</div>
+									<div class="col-2 col-4-small pd1rem">
+										<button type="button" id="btnSimulatorJPY">計算</button>
+									</div>
+									<!-- 受取額指定 -->
+									<div class="col-6 col-12-small">
+										<input type="radio" name="radioName" id="radio2" value="radioCNY" />
+										<label for="radio2">受取額指定</label>
+									</div>
+									<div class="col-4 col-8-small">
+										<input type="text" id="iptSimulatorCNY" name="CNY" class="onlyNumber"
+											disabled="disabled" />
+									</div>
+									<div class="col-2 col-4-small pd1rem">
+										<button type="button" id="btnSimulatorCNY" disabled="disabled">計算</button>
+									</div>
+									<!-- 送金金額 -->
+									<div class="col-6 col-4-small">
+										<span class="resultTitle">送金金額</span>
+									</div>
+									<div class="col-6 col-8-small jaResult" id="txtSendAmt">
+										0
+									</div>
+									<!-- 手数料 -->
+									<div class="col-6 col-4-small">
+										<span class="resultTitle">手数料</span>
+									</div>
+									<div class="col-6 col-8-small jaResult" id="txtCommitionAmt">
+										0
+									</div>
+									<!-- 合計 -->
+									<div class="col-6 col-4-small">
+										<span class="resultTitle">合計</span>
+									</div>
+									<div class="col-6 col-8-small jaResult" id="txtTotalAmt">
+										0
+									</div>
+									<!-- Division line -->
+									<hr class="major">
+									<!-- 受取金額 -->
+									<div class="col-6 col-4-small">
+										<span class="resultTitle">受取金額</span>
+									</div>
+									<div class="col-6 col-8-small zhResultSum commaInt" id="txtReceviceAmt">
+										0
+									</div>
+									<!-- 送金レート -->
+									<div class="col-4 col-4-small">
+										<span class="resultTitle">送金レート</span>
+									</div>
+									<div class="col-8 col-8-small zhResultSum">
+										<span class="resultTitle" id="txtExchangeRateJPY">1JPY / </span>
+										<span id="txtExchangeRateCNY">0</span>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- One -->
+	<div id="one" class="title">
+		<h3>ご利用案内</h3>
+	</div>
+	<div class="featuresGrid">
+		<div class="feature">
+			<h4 class="join">会員登録</h4>
+			<ul>
+				<li>10万円を超える送金は、会員登録が必要です</li>
+				<li>また、10万円までの送金も、継続してご利用になる場合は、会員登録が必要です</li>
+				<li class="none"><a href="https://remit.digitel.co.jp/member-registration/"
+						target="_blank">会員登録のお申し込み</a></li>
+			</ul>
+		</div>
+		<div class="feature">
+			<h4 class="remit">送金依頼</h4>
+			<ul>
+				<li>お申込みは、店舗窓口、FAX、E-Mail、ネットから可能です</li>
+				<li>マイページから送金のお申し込みにより、送金履歴の確認などが出来ます（会員の方にご案内)</li>
+				<li>受取金額指定の送金も可能です</li>
+			</ul>
+		</div>
+		<div class="feature">
+			<h4 class="receive">韓国での受取り</h4>
+			<ul>
+				<li>最短30分で、受取人銀行口座にウォンで振込みます</li>
+				<li>受取人の本人確認及び銀行口座確認を行います（最初の取引時）</li>
+				<li>1回の受取金額、年間の受取金額には上限があります</li>
+			</ul>
+		</div>
+	</div>
+
+	<!-- Two -->
+	<div id="two">
+		<div class="wrapper">
+			<div class="inner">
+				<div class="row gtr-200">
+					<div class="col-6 col-12-medium" id="contact">
+						<div class="title">
+							<h3>問合せ先</h3>
+						</div>
+						<div class="box">
+							<table>
+								<tbody>
+									<tr>
+										<td class="paddingBottom"><strong>[株式会社デジテル 大久保支店] JR大久保駅北口そば</strong></td>
+									</tr>
+									<tr>
+										<td>〒169-0073 東京都新宿区百人町1-17-4</td>
+									</tr>
+									<tr>
+										<td>TEL:03-5348-4416 FAX:03-5348-4417</td>
+									</tr>
+									<tr>
+										<td>E-Mail:remit-okubo@digitel.co.jp</td>
+									</tr>
+									<tr>
+										<td>( 中国語、日本語、韓国語対応可能 )</td>
+									</tr>
+								</tbody>
+							</table>
+
+							<div class="qrcode">
+								<img src="images/line_qr.png" alt="line qrcode" />
+								<img src="images/wechat_qr.png" alt="wechat qrcode" />
+							</div>
+						</div>
+					</div>
+					<div class="col-6 col-12-medium">
+						<div class="title">
+							<h3>E-Mailによるお問合せ</h3>
+						</div>
+						<div class="box">
+							<!-- form action의 폴더경로 확실하게 표기★ -->
+							<form method="get" action="chinese/assets/php/mail.php" id="mailForm"
+								onSubmit="return chkMailFrm()">
+								<div class="row gtr-uniform">
+									<!-- お名前＊ -->
+									<div class="col-12 col-12-small">
+										<input type="text" name="name" placeholder="お名前＊" minlength="2" required />
+									</div>
+									<!-- EMAIL -->
+									<div class="col-12 col-12-xsmall">
+										<input type="email" name="email" placeholder="メールアドレス＊" required />
+									</div>
+									<!-- 題名＊ -->
+									<div class="col-12 col-12-small">
+										<input type="text" name="subject" placeholder="題名＊" required />
+									</div>
+									<!-- お問合せ内容＊ -->
+									<div class="col-12 col-12-small">
+										<textarea rows="6" name="message" placeholder="お問合せ内容＊" required></textarea>
+									</div>
+									<!-- ボタン -->
+									<div class="col-12 col-12-small">
+										<ul class="actions">
+											<li><input type="submit" value="Send Message" /></li>
+											<!--li><input type="reset" value="Reset" /></li-->
+										</ul>
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- Scripts -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/jquery.scrollex.min.js"></script>
+	<script src="assets/js/jquery.validate.min.js"></script>
+	<script src="assets/js/jquery.number.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/remit.simulator.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+
+	<!-- Form validate -->
+	<script>
+		$("#mailForm").validate();
+		$.extend($.validator.messages, {
+			required: "このフィールドは必須です。",
+			remote: "このフィールドを修正してください。",
+			email: "有効なEメールアドレスを入力してください。",
+			minlength: $.validator.format("{0} 文字以上で入力してください。")
+		});
+	</script>
+</body>
+
+</html>

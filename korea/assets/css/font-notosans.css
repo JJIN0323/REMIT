@@ -1,0 +1,45 @@
+@font-face {
+    font-family: 'SpoqaHanSans-Thin';
+    font-style: normal;
+    font-weight: normal;
+    src:url(../fonts/SpoqaHanSans-Thin.eot);
+    src:url(../fonts/SpoqaHanSans-Thin.eot?#iefix) format('embedded-opentype'),
+    url(../fonts/SpoqaHanSans-Thin.woff) format('woff'),
+    url(../fonts/SpoqaHanSans-Thin.ttf) format('opentype');
+}
+
+@font-face {
+    font-family: 'SpoqaHanSans-Bold';
+    font-style: normal;
+    font-weight: 700;
+    src:url(../fonts/SpoqaHanSans-Bold.eot);
+    src:url(../fonts/SpoqaHanSans-Bold.eot?#iefix) format('embedded-opentype'),
+    url(../fonts/SpoqaHanSans-Bold.woff) format('woff'),
+    url(../fonts/SpoqaHanSans-Bold.ttf) format('opentype');
+}
+
+@font-face {
+    font-family: 'SpoqaHanSans-Regular';
+    font-style: normal;
+    font-weight: 400;
+    src:url(../fonts/SpoqaHanSans-Regular.eot);
+    src:url(../fonts/SpoqaHanSans-Regular.eot?#iefix) format('embedded-opentype'),
+    url(../fonts/SpoqaHanSans-Regular.woff) format('woff'),
+    url(../fonts/SpoqaHanSans-Regular.ttf) format('opentype');
+}
+
+@font-face {
+    font-family: 'Noto Sans Korean';
+    font-style: normal;
+    font-weight: 400;
+    src:url(../fonts/notokr-regular.woff) format('woff'),
+    url(../fonts/notokr-regular.ttf) format('opentype');
+}
+
+@font-face {
+    font-family: 'Noto Sans Korean';
+    font-style: normal;
+    font-weight: 500;
+    src:url(../fonts/notokr-medium.woff) format('woff'),
+    url(../fonts/notokr-medium.ttf) format('opentype');
+}
