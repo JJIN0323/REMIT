@@ -1,28 +1,22 @@
-// author : 최형봉과장님
+// author : HYEJIN
 
 $(document).ready(function() {
 
-	/*
-		엔화기준 계산 버튼
-	*/
+	/* 엔화기준 계산 버튼 */
 	$("#btnSimulatorJPY").click(function() {
 		var inputJPY = $("#iptSimulatorJPY").val();
 		execCalcJPY(inputJPY);
 	});
 
 
-	/*
-		위엔화기준 계산 버튼
-	*/
+	/* Z위엔화기준 계산 버튼 */
 	$("#btnSimulatorCNY").click(function() {
 		execCalcCNY();
 	});
 });
 
 
-/*
-	환율 계산을 위한 기준값 설정.
-*/
+/* 환율 계산을 위한 기준값 설정. */
 var COMMISSION_BETWEEN_0_AND_300000 			= 300000;	// 수수료 기준금액 300000
 var COMMISSION_BETWEEN_300001_AND_1000000 		= 1000000;	// 수수료 기준금액 1000000
 
@@ -32,9 +26,7 @@ var COMMISSION_BETWEEN_300001_AND_1000000_AMT 	= 2000;		// 수수료 금액 2000
 
 
 
-/**
- * 엔화기준 계산
- **/
+/* 엔화기준 계산 */
 function execCalcJPY(jpyAmt) {
 
 	var tmpExchangeRateInfo = $('#chInfo .exchangeRateResult').text();
@@ -66,9 +58,7 @@ function execCalcJPY(jpyAmt) {
 }
 
 
-/**
- * 수수료 계산
- **/
+/* 수수료 계산*/
 function execCommitionAmt(jpyAmt) {
 
 	// var inputJPY = $("#iptSimulatorJPY").val();
@@ -88,9 +78,7 @@ function execCommitionAmt(jpyAmt) {
 
 
 
-/**
- * 위엔화기준 계산
- **/
+/* 위엔화기준 계산 */
 function execCalcCNY() {
 
 	var tmpExchangeRateInfo = $('#chInfo .exchangeRateResult').text();
@@ -118,9 +106,7 @@ function execCalcCNY() {
 }
 
 
-/**
- * 시뮬레이터 데이터 설정
- **/
+/* 시뮬레이터 데이터 설정 */
 function setRemitSimulatorInfo(sendAmt, commitionAmt, totalAmt, receiveAmt, exchangeRateJPY, exchangeRateCNY) {
 
 	$("#txtSendAmt").text(sendAmt).number(true, 0);						// 송금금액

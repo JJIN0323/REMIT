@@ -1,19 +1,16 @@
-// author : 최형봉과장님
+// author HYEJIN
 
 $(document).ready(function() {
 
 	/*
-		엔화기준 계산 버튼
-	*/
+ 엔화기준 계산 버튼 */
 	$("#btnSimulatorJPY").click(function() {
 		execCalcBtnJPY();
 	});
 
 
-	/*
-		원화기준 계산 버튼
-	*/
-	$("#btnSimulatorKRW").click(function() {
+	/* 원화기준 계산 버튼 */
+$("#btnSimulatorKRW").click(function() {
 		execCalcBtnKRW();
 	});
 });
@@ -21,9 +18,7 @@ $(document).ready(function() {
 
 
 
-/*
-	환율 계산을 위한 기준값 설정.
-*/
+/* 환율 계산을 위한 기준값 설정. S*/
 
 var JPY_STANDARD_AMT 							= 300000;	// 환율 기준금액
 var COMMISSION_BETWEEN_0_AND_50000 				= 50000;	// 수수료 기준금액 50000
@@ -35,10 +30,7 @@ var COMMISSION_BETWEEN_50001_AND_100000_AMT 	= 1000;		// 수수료 금액 1000
 var COMMISSION_BETWEEN_100001_AND_1000000_AMT 	= 1500;		// 수수료 금액 1500
 
 
-
-/*
- * 엔화기준 계산
- */
+/* 엔화기준 계산 */
 function execCalcBtnJPY() {
 	var inputJPY = $("#iptSimulatorJPY").val();
 
@@ -50,16 +42,11 @@ function execCalcBtnJPY() {
 }
 
 
-/*
- * 30만엔 이하 계산
- */
+/* 30만엔 이하 계산 */
 function execCalcBelow30JPY(jpyAmt) {
-	/*=============================================
-		30만엔 이하
-	===============================================*/
 	var tmpBelow30 = $('#krInfo .rate1').text();
 
-	// 데이터 없을시 계산중지
+	// 데이터 없을 시 계산중지
 	if (tmpBelow30 == null || tmpBelow30 == '') {
 		alert('エラーが発生しました、再度ご入力お願いします。')
 		return;
@@ -86,13 +73,8 @@ function execCalcBelow30JPY(jpyAmt) {
 	setRemitSimulatorInfo(inputJPY, commitionJPY, totalJPY, calcKRW, below30KRW);
 }
 
-/*
- * 30만엔 이상 계산
- */
+/* 30만엔 이상 계산 */
 function execCalcOver30JPY(jpyAmt) {
-	/*=============================================
-		30만엔 이상
-	===============================================*/
 	var tmpOver30 = $('#krInfo .rate2').text();
 
 	// 데이터 없을시 계산중지
@@ -123,9 +105,7 @@ function execCalcOver30JPY(jpyAmt) {
 	setRemitSimulatorInfo(inputJPY, commitionJPY, totalJPY, calcKRW, over30KRW);
 }
 
-/*
- * 수수료 계산
- */
+/* 수수료 계산  */
 function execCommitionAmt(jpyAmt) {
 
 	// var inputJPY = $("#iptSimulatorJPY").val();
@@ -147,14 +127,10 @@ function execCommitionAmt(jpyAmt) {
 
 
 
-/*
- * 원화기준 계산
- */
+/* 원화기준 계산 */
 function execCalcBtnKRW() {
 
-	/*=============================================
-		30만엔 이하
-	===============================================*/
+	/* 30만엔 이하 */
 	var tmpBelow30 = $('#krInfo .rate1').text();
 
 	// 데이터 없을시 계산중지
@@ -168,9 +144,7 @@ function execCalcBtnKRW() {
 	var below30KRW = arrBelow30[1].replace("KRW", "");
 
 
-	/*=============================================
-		30만엔 이상
-	===============================================*/
+	/* 30만엔 이상 */
 	var tmpOver30 = $('#krInfo .rate2').text();
 
 	// 데이터 없을시 계산중지
@@ -217,9 +191,7 @@ function execCalcBtnKRW() {
 }
 
 
-/*
- * 시뮬레이터 데이터 설정
- */
+/* 시뮬레이터 데이터 설정 */
 function setRemitSimulatorInfo(sendAmt, commitionAmt, totalAmt, receiveAmt, exchangeRate) {
 	$("#txtSendAmt").text(sendAmt).number(true, 0);				// 송금금액
 	$("#txtCommitionAmt").text(commitionAmt).number(true, 0);	// 수수료

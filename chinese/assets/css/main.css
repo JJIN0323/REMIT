@@ -2335,7 +2335,7 @@ ul.actions {
 		.wrapper.style1 {
 			background-color: #ffffff;
 			color: #333333;
-			/*background: linear-gradient(to top, rgba(26, 198, 255, 0.9), rgba(26, 198, 255, 0.9)), url("../../images/bridge.jpg");*/
+			background: linear-gradient(to top, rgba(26, 198, 255, 0.9), rgba(26, 198, 255, 0.9)), url("../../images/bridge.jpg");
 			padding: 10rem 0 6rem 0;
 		}
 
